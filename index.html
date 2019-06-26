@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/typewiser01.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -23,14 +23,13 @@
 		</script>
 	</head>
 	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+		<div class="reveal" >
+      <div class="slides" include-html = "templates/typewiser01/template.html">
+      </div>
 		</div>
 
 		<script src="js/reveal.js"></script>
+    <script src="templates/template.js"></script>
 
 		<script>
 			// More info about config & dependencies:
@@ -38,13 +37,15 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				hash: true,
-				dependencies: [
+				center: false,    // Vertical centering of slides
+        dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/highlight/highlight.js' },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+      includeHTML();
 		</script>
 	</body>
 </html>
